@@ -12,21 +12,25 @@ header {
     display: flex;
     height: 65px;
     background-color: #252d38;
-    width: 100%;
+    width: 99%;
     color: white;
     border-radius: 8px 8px 0px 0px;
     font-family: "pt";
     font-weight: 600;
     align-items: center;
+    padding: 0px 10px 0px 10px;
 
+}
+
+#headerLeft, #headerSearch, #headerRight {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 #headerLeft {
     width: 35%;
-    height: 100%;
-    display: flex;
     justify-content: space-evenly;
-    align-items: center;
 
 }
 
@@ -37,22 +41,32 @@ header {
 
 #headerSearch {
     width: 35%;
-    display: flex;
     justify-content: flex-end;
 }
 
 #headerSearch div {
     align-items: center;
     display: flex;
+
 }
 
-.searchIcon {
+#searchIcon, #user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: black;
-    background: #f2bb13;
     width: 45px;
     height: 45px;
-    border: 1px black solid;
+}
 
+#searchIcon {
+    background: #f2bb13;
+    border: 1px black solid;
+}  
+
+#user {
+    background-color: #dadada;
+    color: white;
 }
 
 #headerSearch input {
@@ -63,31 +77,19 @@ header {
 
 #headerRight {
     width: 30%;
-    display: flex;
     justify-content: flex-end;
-    align-items: center;
 }
 
 #headerRight img {
-        height: 35px;
-
+    height: 35px;
 }
 
-.user {
-    color: white;
-    height: 45px;
-    width: 45px;
-    background-color: #dadada;
+#headerRight div, #chevron {
+    margin-left: 15px;
 }
+
 
 #headerRight p {
     display: inline-block;
 }
 
-.chevron {
-    float: right;
-}
-
-i {
-    vertical-align: middle;
-}
