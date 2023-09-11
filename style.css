@@ -1,0 +1,93 @@
+/* body {
+    width: 1900px;
+    min-height: 1000px;
+} */
+
+@font-face {
+    font-family: "pt";
+    src: url(uploads/fonts/PTS55F.ttf);
+}
+
+header {
+    display: flex;
+    height: 65px;
+    background-color: #252d38;
+    width: 100%;
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+    font-family: "pt";
+    font-weight: 600;
+    align-items: center;
+
+}
+
+#headerLeft {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#headerLeft p {
+    height: 100%;
+    text-transform: uppercase;
+}
+
+#headerSearch {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#headerSearch div {
+    align-items: center;
+    display: flex;
+}
+
+.searchIcon {
+    color: black;
+    background: #f2bb13;
+    width: 45px;
+    height: 45px;
+    border: 1px black solid;
+
+}
+
+#headerSearch input {
+    width: 300px;
+    background-color: #454c55;
+    padding: 13px;
+}
+
+#headerRight {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#headerRight img {
+        height: 35px;
+
+}
+
+.user {
+    color: white;
+    height: 45px;
+    width: 45px;
+    background-color: #dadada;
+}
+
+#headerRight p {
+    display: inline-block;
+}
+
+.chevron {
+    float: right;
+}
+
+i {
+    vertical-align: middle;
+}
