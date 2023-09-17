@@ -102,7 +102,7 @@ header {
 
 
 #headerRight p {
-    display: inline-block;
+    display: inline;
 }
 
 .bubEvent{
@@ -171,7 +171,7 @@ width: 35%;
     /* min-height: 100%; */
     margin: auto;
 }
-main img {
+#gameImg {
     width: 100%;
     height: 90%;
 }
@@ -190,9 +190,10 @@ main img {
     width: 100%;
 }
 
-#leftGame{
+#leftGame, #rightGame{
     background-color: #252e38;
-
+    display: flex;
+    flex-direction: column;
     /* border: 1px solid black; */
 
 
@@ -205,11 +206,12 @@ main img {
 
 #bottomPuzzle {
     background-color: #252e38;
-    height: 12%;
+    height: 14%;
 }
 
 #rightGame {
-    background-color: #252e38;
+    display: flex;
+    flex-direction: column;
 
     margin-left: 10px;
     border: 1px solid black;
@@ -238,6 +240,52 @@ main img {
 #stars {
     margin-left: 15px;
     padding-bottom: 5px;
+}
+
+#gameImg {
+    position: relative;
+}
+
+#txtImg {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    align-items: end;
+
+}
+
+.hoverTitle {
+    color: white;
+    font-weight: bold;
+    margin: unset;
+    font-size: 1.1em;
+}
+
+#txtImg img {
+    width: 20px;
+}
+
+.xp {
+    display: inline;
+    font-weight: bold;
+    margin: unset;
+    color: #f2ad2b;
+    font-size: 0.8em;
+    margin-top: 5px;
+
+}
+
+.nbUsers {
+    display: inline;
+    color: white;
+    margin: unset;
+    font-size: 0.9em;
+    margin-top: 5px;
+
+}
+
+#gameImg:hover {
+    filter: brightness(20%);
 }
 
 /* ------------------------------- EASY ------------------------------- */
