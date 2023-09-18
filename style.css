@@ -167,7 +167,7 @@ width: 35%;
 /* TOP */
 
 #allGames {
-    width: 75%;
+    width: 65%;
     /* min-height: 100%; */
     margin: auto;
 }
@@ -178,16 +178,36 @@ width: 35%;
 
 #topGames{
     display: flex;
-    justify-content: center;
-    margin: auto;
     /* width: 100%;
     height: 100%; */
 }
 
+#test {
+    margin-bottom: -15px;
+
+}
+
 #yellowLine {
-    background-color: #f2bb13;
     height: 6px;
+
     width: 100%;
+}
+
+#yellow {
+    display: inline;
+    float: left;
+    width: 90%;
+    height: 100%;
+
+    background-color: #f2bb13;
+}
+
+#grey {
+    display: inline;
+    width: 10%;
+    height: 100%;
+    float: right;
+    background-color: #454c55;
 }
 
 #leftGame, #rightGame{
@@ -206,16 +226,11 @@ width: 35%;
 
 #bottomPuzzle {
     background-color: #252e38;
-    height: 14%;
+    height: 30%;
 }
 
 #rightGame {
-    display: flex;
-    flex-direction: column;
-
     margin-left: 10px;
-    border: 1px solid black;
-
 }
 
 #colorStar {
@@ -290,10 +305,42 @@ width: 35%;
 
 /* ------------------------------- EASY ------------------------------- */
 #easy {
-    width: 75%;
+    width: 65%;
     margin: auto;
 }
 
 #puzzle {
     /* margin-left: 5px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#categoryTitle{
+    font-size: 1em;
+    text-transform:uppercase;
+    color: #454c94;
+    margin-top: 40px;
+}
+
+#categorySubtitle{
+    display: inline-block;
+
+    color: #454c94;
+    margin-top: 5px;
+    /* float: left; */
+}
+
+#percent {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #454c94;
+    font-weight: bold;
+    text-align: end;
+/* float: right; */
+}
+
+#gameImgMini {
+width: 275px;
 }
