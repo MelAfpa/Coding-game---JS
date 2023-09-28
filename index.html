@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
     <link rel="icon" href="uploads/codingame-logo (1).png">
     <title>Programmer est un jeu - CodingGame</title>
@@ -12,24 +12,24 @@
 <body>
     <header>
         <section id="headerLeft">
-            <div class="logo">
-                <img src="uploads/icon.png" alt="logo de coding game">
+            <div>
+                <a class="logo" href="#"><img src="uploads/icon.png" alt="logo de coding game"></a>
             </div>
-            <div class="home">
-                <i class=" fa-solid fa-house fa-lg" style="color: #ffffff;"></i>
+            <div>
+                <a class="home" href="#"><i class=" fa-solid fa-house fa-lg" style="color: #ffffff;"></i></a>
             </div>
-            <div class="event">
-                <p>Evenement</p>
+            <div>
+                <a href="#" class="event">Evenement</a>
                 <span class="bubEvent">1</span>
             </div>
-            <div class="solo">
-                <p>Solo</p>
+            <div>
+                <a class="solo" href="#">Solo</a>
             </div>
-            <div class="multi">
-                <p>Multi</p>
+            <div>
+                <a class="multi" href="#">Multi</a>
             </div>
-            <div class="commu">
-                <p>Communaute</p>
+            <div>
+                <a class="commu" href="#">Communaute</a>
             </div>
         </section>
         <section id="headerSearch">
@@ -40,18 +40,21 @@
         </section>
         <section id="headerRight">
             <div>
-                <img src="uploads/signal2.png" alt="icone de live">
+                <a class="signal" href="#"><img src="uploads/signal2.png" alt="icone de live"></a>
             </div>
             <div>
-                <i class="fa-solid fa-bell fa-lg " style="color: #ffffff;"></i>
+                <a class="ring" href="#"><i class="fa-solid fa-bell fa-lg " style="color: #ffffff;"></i></a>
+                
                 <span class="bubble">6</span>
             </div>
             <div>
-                <i id="user" class="fa-solid fa-user fa-lg"></i>
+                <a class="user" href="#"><i id="user" class="fa-solid fa-user fa-lg"></i></a>
+                
             </div>            
             <div>
-                <p>Mistopal</p>
-                <i id="chevron" class="fa-solid fa-chevron-down"></i>
+                <a  class="profil" href="#">Mistopal<i id="chevron" class="fa-solid fa-chevron-down"></i></a>
+                
+                
             </div>
         </section>
     </header>
@@ -59,45 +62,14 @@
     <main>
         <section id="mainHeader">
             <div>
-                <p class="color">Puzzles</p>
-                <p class="noColor">Puzzles sponsorisés</p>
+                <button class="navPuzzle">Puzzles</button>
+                <button class="navPuzzleSponso">Puzzles sponsorisés</button>
             </div>
            
         </section>
         <section id="allGames">
-            <h1 id="categoryTitle">Suggestions</h1>
-            <div id="topGames">
-                <div id="leftGame">
-                    <div id="test">
-                        <span id="txtImg">
-                            <p class="hoverTitle">Temperatures</p>
-                            <img src="uploads/xp.png" alt="logo xp">
-                            <p class="xp">+50 XP</p>
-                            <br>
-                            <i class="fa-solid fa-user" style="color: #ffffff;"></i>
-                            <p class="nbUsers">Terminé par 248 896 CodinGamers</p>
-                        </span>
-
-                        <img id="gameImg" src="uploads/temperatures.png" alt="image du premier puzzle">
-                        <div id="yellowLine">
-                            <div id="yellow"></div>
-                            <div id="grey"></div>
-                        </div> 
-                    </div>
-                       
-                    <div id="bottomPuzzle">
-                        <p id="titlePuzzle">Conditions, Boucles, Tableaux</p> 
-                        <span id="stars">
-                            <i id="colorStar" class="fa-solid fa-star fa-xs"></i>
-                            <i id="colorStar" class="fa-solid fa-star fa-xs"></i>
-                            <i id="colorStar" class="fa-solid fa-star fa-xs"></i>
-                            <i id="noColor" class="fa-solid fa-star fa-xs"></i>
-                            <i id="noColor"  class="fa-solid fa-star fa-xs"></i>
-                        </span>                        
-                    </div> 
-                </div>
-                <div id="rightGame">
-                    <div id="test">
+                <!-- <div id="rightGame"> -->
+                    <!-- <div id="addingTxt">
                         <span id="txtImg">
                             <p class="hoverTitle">Shadow of the knight</p>
                             <img src="uploads/xp.png" alt="logo xp">
@@ -122,9 +94,9 @@
                             <i id="noColor" class="fa-solid fa-star fa-xs"></i>
                             <i id="noColor"  class="fa-solid fa-star fa-xs"></i>
                         </span>                    
-                    </div>
-                </div>
-            </div>
+                    </div> -->
+                <!-- </div>
+            </div> -->
         </section>
         <section id="easy">
             <div>
@@ -134,7 +106,7 @@
                 <p id="percent">1% complété</p>
                 <div id="topGames">
                     <div id="puzzle">
-                        <div id="test">
+                        <div id="addingTxt">
                             <span id="txtImg">
                                 <p class="hoverTitle">Shadow of the knight</p>
                                 <img src="uploads/xp.png" alt="logo xp">
@@ -161,7 +133,7 @@
                         </div> 
                     </div>
                     <div id="puzzle">
-                        <div id="test">
+                        <div id="addingTxt">
                             <span id="txtImg">
                                 <p class="hoverTitle">The descent</p>
                                 <img src="uploads/xp.png" alt="logo xp">
@@ -188,7 +160,7 @@
                         </div> 
                     </div>
                     <div id="puzzle">
-                        <div id="test">
+                        <div id="addingTxt">
                             <span id="txtImg">
                                 <p class="hoverTitle">Power of thor</p>
                                 <img src="uploads/xp.png" alt="logo xp">
@@ -216,7 +188,7 @@
                     </div>
 
                     <div id="puzzle">
-                        <div id="test">
+                        <div id="addingTxt">
                             <span id="txtImg">
                                 <p class="hoverTitle">Mars lander</p>
                                 <img src="uploads/xp.png" alt="logo xp">
@@ -252,6 +224,9 @@
 
     <footer></footer>
     
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
+    <script src="datas/puzzle.js"></script>
+    <script src="js/puzzle.js"></script>  
+
 </body>
 </html>

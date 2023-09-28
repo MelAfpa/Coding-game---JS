@@ -5,12 +5,12 @@
 
 @font-face {
     font-family: "pt";
-    src: url(uploads/fonts/PTS55F.ttf);
+    src: url(../uploads/fonts/PTS55F.ttf);
 }
 
 @font-face {
     font-family: "pt bold";
-    src: url(uploads/fonts/PTN77F.ttf);
+    src: url(../uploads/fonts/PTN77F.ttf);
 }
 
 body {
@@ -49,6 +49,16 @@ header {
     display: inline;
     height: 100%;
     text-transform: uppercase;
+}
+
+#headerLeft a {
+   text-decoration: none;
+   color: white;
+   text-transform: uppercase;
+}
+
+#headerLeft a:hover {
+    color: #f2bb13;
 }
 
 #headerSearch {
@@ -98,12 +108,16 @@ header {
 
 #headerRight div, #chevron {
     margin-left: 15px;
+    color: white;
+}
+
+.profil{
+    text-decoration: unset;
+    color: white;
+
 }
 
 
-#headerRight p {
-    display: inline;
-}
 
 .bubEvent{
     border-radius: 50%;
@@ -120,6 +134,11 @@ header {
     font-size: 0.9em;
     padding: 2px 7px 2px 7px;
     margin-left: -10px;
+}
+
+
+.logo:hover, .signal:hover, .ring:hover, .user:hover, .profil:hover {
+    filter: brightness(80%);
 }
 
  /* ------------------------------------------------------ MAIN ------------------------------------------------------ */
@@ -139,28 +158,43 @@ main {
 #mainHeader div {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     height: 100%;
-width: 35%;    
+    width: 50%;    
 }
 
-.noColor, .color{
+.navPuzzleSponso, .navPuzzle{
     text-transform: uppercase;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 550;
     font-family: "pt";
-    margin-left: 25px;
-}
-
-#mainHeader .noColor {
     color: white;
+
 }
 
-.color {
+#mainHeader button {
+    background-color: #242d38;
+    border: unset;
+    padding-left: 20px;
+}
+
+#mainHeader button:hover{
+    cursor: grab;
+    border-bottom: 4px #f2bb13 solid;
+    padding: 23px 10px 23px 10px;
+
+
+}
+
+
+.navPuzzle:hover, .navPuzzle::selection, .navPuzzleSponso:hover, .navPuzzleSponso::selection {
     color: #f2bb13;
     border-bottom: 4px #f2bb13 solid;
-    padding: 23px 20px 23px 20px;
+    /* padding: 23px 0px 23px 0px; */
 }
+
+
+
 
 
 
@@ -182,7 +216,7 @@ width: 35%;
     height: 100%; */
 }
 
-#test {
+#addingTxt {
     margin-bottom: -15px;
 
 }
@@ -298,6 +332,8 @@ width: 35%;
     margin-top: 5px;
 
 }
+
+.userHover{color: white;}
 
 #gameImg:hover {
     filter: brightness(20%);
