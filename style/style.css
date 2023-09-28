@@ -300,6 +300,7 @@ main {
     position: absolute;
     z-index: 1;
     align-items: end;
+    padding-left: 20px;
 
 }
 
@@ -308,32 +309,41 @@ main {
     font-weight: bold;
     margin: unset;
     font-size: 1.1em;
+    text-transform: capitalize;
 }
 
-#txtImg img {
+.divXp {
+    padding: 10px 0px 10px 0px;
+
+}
+
+#xpImg {
     width: 20px;
+    padding-right: 5px;
+    vertical-align :bottom;
+
 }
 
 .xp {
     display: inline;
     font-weight: bold;
-    margin: unset;
     color: #f2ad2b;
     font-size: 0.8em;
-    margin-top: 5px;
 
 }
 
 .nbUsers {
     display: inline;
     color: white;
-    margin: unset;
     font-size: 0.9em;
-    margin-top: 5px;
 
 }
 
-.userHover{color: white;}
+.userHover{
+    color: white;
+    padding-right: 10px;
+
+}
 
 #gameImg:hover {
     filter: brightness(20%);

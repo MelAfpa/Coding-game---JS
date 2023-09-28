@@ -1,24 +1,29 @@
 // ------------------------- PROGRAMME PRINCIPAL -------------------------
 showSuggestions();
 
+
 // ------------------------- FONCTIONS -------------------------
 
-function showSuggestions(){
-    // alert("function ok");
+function createPuzzle(identifiant){
+console.log('CreatePuzzle()');
         // Récupération de la balise parent
-    let section_suggestion = document.getElementById("allGames");
+    let allGames = document.getElementById("allGames");
+    let topGames = document.getElementById("topGames");
 
     // Création des éléments enfants
-    let categoryTitle = document.createElement("h1");
+    // let categoryTitle = document.createElement("h1");
 
-    let topGames = document.createElement("div");
+    // let topGames = document.createElement("div");
     let leftGame = document.createElement("div");
 
     let addingTxt = document.createElement("div");
     let txtImg = document.createElement("span");
     let hoverTitle = document.createElement("p");
+    let divXp = document.createElement("div");
     let xpImg = document.createElement("img");
     let xp = document.createElement("p");
+    
+    let divUsers = document.createElement("div");
     let userHover = document.createElement("i");
     let nbUsers = document.createElement("p");
 
@@ -36,18 +41,23 @@ function showSuggestions(){
     let colorStar3 = document.createElement("i");
     let noColor = document.createElement("i");
     let noColor2 = document.createElement("i");
-    let imgPuzzle = puzzle.get("1").nom;
+    let imgPuzzle = document.createElement("img");
+
+    // let idPuzzle = puzzle.get(identifiant);
 
     // Ajout des id/class
     allGames.setAttribute("id", "allGames");
 
-     categoryTitle.setAttribute("id", "categoryTitle");
-     topGames.setAttribute("id", "topGames");
+    //  categoryTitle.setAttribute("id", "categoryTitle");
+    //  topGames.setAttribute("id", "topGames");
      leftGame.setAttribute("id", "leftGame");
 
      addingTxt.setAttribute("id", "addingTxt");
      txtImg.setAttribute("id", "txtImg");
      hoverTitle.setAttribute("class", "hoverTitle");
+     divXp.setAttribute("class", "divXp");
+     divUsers.setAttribute("class", "divUsers");
+
      // Modification de l'images
      xpImg.setAttribute("id", "xpImg");
      xpImg.src = "uploads/xp.png";
@@ -57,6 +67,7 @@ function showSuggestions(){
      nbUsers.setAttribute("class", "nbUsers");
     
     // Modification de l'images
+     imgPuzzle = puzzle.get(identifiant).nom;
      gameImg.setAttribute("id", "gameImg");
      gameImg.src = "uploads/"+ imgPuzzle +".png";
      console.log(imgPuzzle);
@@ -82,23 +93,25 @@ function showSuggestions(){
 
 
      // Ajout des titres
-     categoryTitle.innerHTML = "suggestions";
-     titlePuzzle.innerHTML = "Conditions, Boucles, Tableaux";
-     hoverTitle.innerHTML = "Temperatures";
-     xp.innerHTML = "+50 XP";
-     nbUsers.innerHTML = "Terminé par 248 896 CodinGamers";
+     categoryTitle.innerHTML = puzzle.get(identifiant).category;
+     titlePuzzle.innerHTML = puzzle.get(identifiant).titre;
+     hoverTitle.innerHTML = puzzle.get(identifiant).nom;
+     xp.innerHTML = puzzle.get(identifiant).xp + " XP";
+     nbUsers.innerHTML = "Terminé par "+ puzzle.get(identifiant).nbUsers +" CodinGamers";
 
-     allGames.append(categoryTitle);
+     allGames.appendChild(categoryTitle);
      allGames.appendChild(topGames);
      topGames.appendChild(leftGame);
      leftGame.appendChild(addingTxt);
 
      addingTxt.appendChild(txtImg);
      txtImg.appendChild(hoverTitle);
-     txtImg.appendChild(xpImg);
-     txtImg.appendChild(xp);
-     txtImg.appendChild(userHover);
-     txtImg.appendChild(nbUsers);
+     txtImg.append(divXp);
+     divXp.appendChild(xpImg);
+     divXp.appendChild(xp);
+     txtImg.appendChild(divUsers)
+     divUsers.appendChild(userHover);
+     divUsers.appendChild(nbUsers);
      addingTxt.appendChild(gameImg);
      addingTxt.appendChild(yellowLine);
      yellowLine.appendChild(yellow);
@@ -119,6 +132,17 @@ function showSuggestions(){
 
 }
 
+function showSuggestions(){
+    console.log('showSuggestions');
+
+    for (var [identPuzzle, idPuzzle] of puzzle.entries()) {
+        if (idPuzzle.category === "suggestions") {
+            createPuzzle(identPuzzle);
+        }
+    }
+
+}
+
 
 
 function addFilter(){
@@ -126,15 +150,10 @@ function addFilter(){
     let yellow = document.getElementById("yellow");
     let txtImg = document.getElementById("txtImg");
 
-    txtImg.style.display = "flex";
-    txtImg.style.flexDirection = "column";
-    txtImg.style.alignItems = "start";
+    txtImg.style.display = "block";
     yellowLine.style.height = "15px";
     yellow.innerHTML = "90% FINI";
     yellow.style.fontSize = "0.8em";
     yellow.style.paddingLeft = "10px";
 }
 
-// function addImg(){
-//     for
-// }
