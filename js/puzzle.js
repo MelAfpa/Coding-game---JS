@@ -10,7 +10,7 @@ function createPuzzle(identifiant){
     let topGames = document.getElementById("topGames");
 
     // Création des éléments enfants
-    // let categoryTitle = document.createElement("h1");
+    let categoryTitle = document.createElement("h1");
 
     let leftGame = document.createElement("div");
 
@@ -46,7 +46,7 @@ function createPuzzle(identifiant){
     // Ajout des id/class
     allGames.setAttribute("id", "allGames");
 
-    //  categoryTitle.setAttribute("id", "categoryTitle");
+     categoryTitle.setAttribute("id", "categoryTitle");
     //  topGames.setAttribute("id", "topGames");
      leftGame.setAttribute("id", "leftGame");
 
@@ -97,8 +97,8 @@ function createPuzzle(identifiant){
      xp.innerHTML = puzzle.get(identifiant).xp + " XP";
      nbUsers.innerHTML = "Terminé par "+ puzzle.get(identifiant).nbUsers +" CodinGamers";
 
-     allGames.appendChild(categoryTitle);
      allGames.appendChild(topGames);
+     allGames.appendChild(categoryTitle);
      topGames.appendChild(leftGame);
      leftGame.appendChild(addingTxt);
 
@@ -194,5 +194,6 @@ function addFilter(){
     yellow.innerHTML = "90% FINI";
     yellow.style.fontSize = "0.8em";
     yellow.style.paddingLeft = "10px";
+    yellow.style.width = "88%";
 }
 

@@ -40,7 +40,7 @@ header {
 }
 
 #headerLeft {
-    width: 35%;
+    width: 30%;
     justify-content: space-evenly;
 
 }
@@ -145,6 +145,7 @@ header {
 main { 
     background-color: #e7e9eb;
     height: 1200px;
+
 }
 
 #mainHeader {
@@ -158,7 +159,7 @@ main {
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 50%;    
+    width: 48%;    
 }
 
 .navPuzzleSponso, .navPuzzle{
@@ -167,6 +168,7 @@ main {
     font-weight: 550;
     font-family: "pt";
     color: white;
+    height: inherit;
 
 }
 
@@ -202,6 +204,7 @@ main {
     width: 65%;
     /* min-height: 100%; */
     margin: auto;
+
 }
 #gameImg {
     width: 100%;
@@ -214,6 +217,7 @@ main {
     display: flex;
     /* width: 100%;
     height: 100%; */
+    justify-content: space-between;
 }
 
 #addingTxt {
@@ -244,7 +248,7 @@ main {
     background-color: #454c55;
 }
 
-#leftGame, #rightGame{
+#leftGame{
     background-color: #252e38;
     display: flex;
     flex-direction: column;
@@ -359,13 +363,14 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 300px;
 }
 
-#categoryTitle{
+#categoryTitle, #easyTitle{
     font-size: 1em;
     text-transform:uppercase;
-    color: #454c94;
-    margin-top: 40px;
+    color: #3b3b3b;
+    margin-top: 20px;
 }
 
 #categorySubtitle{
@@ -387,5 +392,6 @@ main {
 }
 
 #gameImgMini {
-width: 275px;
+width: 100%;
+height: 155px;
 }
