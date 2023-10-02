@@ -273,12 +273,12 @@ main {
 }
 
 #colorStar {
-    color: white;
+    color: #f2bb13;
 }
 
 #noColor {
     /* color: white; */
-    /* color:  #5c572a; */
+    color:  #5c572a;
 }
 
 #colorStar, #noColor{
