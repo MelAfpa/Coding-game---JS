@@ -35,10 +35,10 @@ function createPuzzle(identifiant){
     let titlePuzzle = document.createElement("p");
     let stars = document.createElement("span");
     let colorStar = document.createElement("i");
-    // let colorStar2 = document.createElement("i");
-    // let colorStar3 = document.createElement("i");
-    // let noColor = document.createElement("i");
-    // let noColor2 = document.createElement("i");
+    let colorStar2 = document.createElement("i");
+    let colorStar3 = document.createElement("i");
+    let noColor = document.createElement("i");
+    let noColor2 = document.createElement("i");
     let imgPuzzle = document.createElement("img");
 
     // let idPuzzle = puzzle.get(identifiant);
@@ -80,14 +80,14 @@ function createPuzzle(identifiant){
      stars.setAttribute("id", "stars");
      colorStar.setAttribute("class", "fa-solid fa-star fa-xs");
      colorStar.setAttribute("id", "colorStar");
-    //  colorStar2.setAttribute("class", "fa-solid fa-star fa-xs");
-    //  colorStar2.setAttribute("id", "colorStar");
-    //  colorStar3.setAttribute("class", "fa-solid fa-star fa-xs");
-    //  colorStar3.setAttribute("id", "colorStar");
-    //  noColor.setAttribute("class", "fa-solid fa-star fa-xs");
-    //  noColor.setAttribute("id", "noColor");
-    //  noColor2.setAttribute("class", "fa-solid fa-star fa-xs");
-    //  noColor2.setAttribute("id", "noColor");
+     colorStar2.setAttribute("class", "fa-solid fa-star fa-xs");
+     colorStar2.setAttribute("id", "colorStar");
+     colorStar3.setAttribute("class", "fa-solid fa-star fa-xs");
+     colorStar3.setAttribute("id", "colorStar");
+     noColor.setAttribute("class", "fa-solid fa-star fa-xs");
+     noColor.setAttribute("id", "noColor");
+     noColor2.setAttribute("class", "fa-solid fa-star fa-xs");
+     noColor2.setAttribute("id", "noColor");
 
 
      // Ajout des titres
@@ -119,16 +119,16 @@ function createPuzzle(identifiant){
      bottomPuzzle.appendChild(titlePuzzle);
      bottomPuzzle.appendChild(stars);
      stars.appendChild(colorStar);
-     stars.appendChild(colorStar);
-     stars.appendChild(colorStar);
-     stars.appendChild(colorStar);
-     stars.appendChild(colorStar);
+    //  stars.appendChild(colorStar);
+    //  stars.appendChild(colorStar);
+    //  stars.appendChild(colorStar);
+    //  stars.appendChild(colorStar);
 
-    //  stars.appendChild(colorStar2);
-    //  stars.appendChild(colorStar3);
-    //  stars.appendChild(noColor);
+     stars.appendChild(colorStar2);
+     stars.appendChild(colorStar3);
+     stars.appendChild(noColor);
 
-    //  stars.appendChild(noColor2);
+     stars.appendChild(noColor2);
 
      if(puzzle.get(identifiant).progress === "0"){
         console.log("if");
@@ -136,14 +136,14 @@ function createPuzzle(identifiant){
         grey.style.width = "100%";
      } 
 
-     if(puzzle.get(identifiant).stars === "3"){
-        console.log("if");
-        colorStar.style.color = "white";
-     }
+    //  if(puzzle.get(identifiant).stars === "3"){
+    //     console.log("if");
+    //     colorStar.style.color = "white";
+    //  }
 
-     for(let i = 0; n = puzzle.get(identifiant).stars; i++){
-        colorStar.style.color = "#ffd200";
-     }
+    //  for(let i = 0; n = puzzle.get(identifiant).stars; i++){
+    //     colorStar.style.color = "#ffd200";
+    //  }
 
 
      addingTxt.addEventListener("mouseover", addFilter);
