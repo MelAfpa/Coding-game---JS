@@ -96,6 +96,7 @@ function createPuzzle(identifiant){
      hoverTitle.innerHTML = puzzle.get(identifiant).nom;
      xp.innerHTML = puzzle.get(identifiant).xp + " XP";
      nbUsers.innerHTML = "Terminé par "+ puzzle.get(identifiant).nbUsers +" CodinGamers";
+    //  yellow.innerHTML = puzzle.get(identifiant).progress + "% FINI";
 
      allGames.appendChild(topGames);
      allGames.appendChild(categoryTitle);
@@ -130,20 +131,26 @@ function createPuzzle(identifiant){
 
      stars.appendChild(noColor2);
 
-     if(puzzle.get(identifiant).progress === "0"){
-        console.log("if");
-        yellow.style.width = "0%";
-        grey.style.width = "100%";
-     } 
 
-    //  if(puzzle.get(identifiant).stars === "3"){
+     if(puzzle.get(identifiant).progress < "100"){
+    console.log("progress < 100");
+        yellow.style.width = puzzle.get(identifiant).progress + "%";
+        grey.style.width = (100 - puzzle.get(identifiant).progress) + "%";
+     } else {
+    console.log("progress = 100");
+        yellow.style.width = "100%";
+        grey.style.width = "0%";
+     }
+
+    //  if(puzzle.get(identifiant).stars < "5"){
     //     console.log("if");
-    //     colorStar.style.color = "white";
+    //     for(let i = 0; n = puzzle.get(identifiant).stars; i++){
+    //         colorStar.style.color = "#ffd200";
+    //      }
+    //     // colorStar.style.color = "white";
     //  }
 
-    //  for(let i = 0; n = puzzle.get(identifiant).stars; i++){
-    //     colorStar.style.color = "#ffd200";
-    //  }
+     
 
 
      addingTxt.addEventListener("mouseover", addFilter);
@@ -153,7 +160,7 @@ function createPuzzle(identifiant){
 }
 
 function showSuggestions(){
-    console.log('showSuggestions');
+console.log('showSuggestions');
 
     for (var [identPuzzle, idPuzzle] of puzzle.entries()) {
         if (idPuzzle.category === "suggestions") {

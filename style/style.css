@@ -242,7 +242,7 @@ main {
 
 #grey {
     display: inline;
-    /* width: 10%; */
+    width: 10%;
     height: 100%;
     float: right;
     background-color: #454c55;
