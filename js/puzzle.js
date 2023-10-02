@@ -12,7 +12,7 @@ function createPuzzle(identifiant){
     // Création des éléments enfants
     let categoryTitle = document.createElement("h1");
 
-    let leftGame = document.createElement("div");
+    let game = document.createElement("div");
 
     let addingTxt = document.createElement("div");
     let txtImg = document.createElement("span");
@@ -48,7 +48,7 @@ function createPuzzle(identifiant){
 
      categoryTitle.setAttribute("id", "categoryTitle");
     //  topGames.setAttribute("id", "topGames");
-     leftGame.setAttribute("id", "leftGame");
+     game.setAttribute("id", "game");
 
      addingTxt.setAttribute("id", "addingTxt");
      txtImg.setAttribute("id", "txtImg");
@@ -99,8 +99,8 @@ function createPuzzle(identifiant){
 
      allGames.appendChild(topGames);
      allGames.appendChild(categoryTitle);
-     topGames.appendChild(leftGame);
-     leftGame.appendChild(addingTxt);
+     topGames.appendChild(game);
+     game.appendChild(addingTxt);
 
      addingTxt.appendChild(txtImg);
      txtImg.appendChild(hoverTitle);
@@ -115,7 +115,7 @@ function createPuzzle(identifiant){
      yellowLine.appendChild(yellow);
      yellowLine.appendChild(grey);
 
-     leftGame.appendChild(bottomPuzzle);
+     game.appendChild(bottomPuzzle);
      bottomPuzzle.appendChild(titlePuzzle);
      bottomPuzzle.appendChild(stars);
      stars.appendChild(colorStar);
@@ -148,6 +148,7 @@ function createPuzzle(identifiant){
 
      addingTxt.addEventListener("mouseover", addFilter);
     //  addingTxt.addEventListener("mouseout", delete addFilter);
+    addingTxt.removeEventListener("mouseout", addFilter);
 
 }
 
@@ -159,8 +160,28 @@ function showSuggestions(){
             createPuzzle(identPuzzle);
         }
     }
-
 }
+
+
+
+function addFilter(){
+    let yellowLine = document.getElementById("yellowLine");
+    let yellow = document.getElementById("yellow");
+    let txtImg = document.getElementById("txtImg");
+
+    txtImg.style.display = "block";
+    yellowLine.style.height = "15px";
+    // yellow.innerHTML = puzzle.get(identifiant).progress + "% FINI";
+    yellow.innerHTML = "90% FINI";
+    yellow.style.fontSize = "0.8em";
+    yellow.style.paddingLeft = "10px";
+    yellow.style.width = "88%";
+}
+
+function delFilter(){
+    console.log("delFilter");
+}
+
 
 // function easyPuzzle(){
 //     let easy = document.getElementById("easy");
@@ -181,19 +202,3 @@ function showSuggestions(){
 
 
 // }
-
-
-function addFilter(){
-    let yellowLine = document.getElementById("yellowLine");
-    let yellow = document.getElementById("yellow");
-    let txtImg = document.getElementById("txtImg");
-
-    txtImg.style.display = "block";
-    yellowLine.style.height = "15px";
-    // yellow.innerHTML = puzzle.get(identifiant).progress + "% FINI";
-    yellow.innerHTML = "90% FINI";
-    yellow.style.fontSize = "0.8em";
-    yellow.style.paddingLeft = "10px";
-    yellow.style.width = "88%";
-}
-

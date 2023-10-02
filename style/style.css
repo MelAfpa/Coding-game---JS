@@ -242,13 +242,13 @@ main {
 
 #grey {
     display: inline;
-    width: 10%;
+    /* width: 10%; */
     height: 100%;
     float: right;
     background-color: #454c55;
 }
 
-#leftGame{
+#game{
     background-color: #252e38;
     display: flex;
     flex-direction: column;
@@ -358,13 +358,13 @@ main {
     margin: auto;
 }
 
-#puzzle {
-    /* margin-left: 5px; */
+/* #puzzle {
+    margin-left: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
-}
+} */
 
 #categoryTitle, #easyTitle{
     font-size: 1em;
